@@ -2,6 +2,34 @@ This changelog notes changes to API endpoints that are documented and listed
 through Swagger. Changes to undocumented, internal CATMAID APIs are not
 included in this changelog.
 
+## Under development
+
+### Additions
+
+- `POST /{project_id}/skeletons/cable-length`:
+  The POST version of the already existing GET endpoint. It allows passing in
+  more skeleton IDs for which to get the cable length.
+
+- `POST /{project_id}/skeletons/connectivity-counts`:
+  Allows to get the number connector links per relation type for each passed in
+  skeleton. Also accepts GET parameters.
+
+- `GET /{project_id}/labels/detail`:
+  Returns a list of of label objects, each with a name field and an ID field.
+
+### Modifications
+
+None.
+
+### Deprecations
+
+None.
+
+### Removals
+
+None.
+
+
 ## 2018.07.19
 
 ### Additions
