@@ -518,7 +518,7 @@ def getPrimaryVolumes(project_id):
 
 def makeVolumeBB(project_id):
     '''
-        Helper function - Directly copied from within the get_volume_details functions - just wrapped it
+        Helper function - Directly copied from within the get_volume_details functions - just wrapped it in a for loop so that it
         would include information on all relevant neuropils 
     '''
     myTupList = []
@@ -591,8 +591,13 @@ def skeletonInnervations(paramSet, skeleton_ids):
         ---
         parameters:
             - name: skeleton_ids
-            - required: True
-            - type: array [int]
+              required: True
+              type: array [int]
+              paramType: Form
+            - name: paramSet
+              required: True
+              type: dict
+              paramType: functionCall
     '''
     skeleton_ids = skeleton_ids
     skelVols = {}
